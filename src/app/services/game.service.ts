@@ -27,6 +27,8 @@ export class GameService {
 
   loadAssets(canvasElement: HTMLCanvasElement): Promise<void> {
     this.context = canvasElement.getContext('2d');
+    console.log(this.context);
+
     canvasElement.width = this.width;
     canvasElement.height = this.height;
     return new Promise((resolve, reject) => {
